@@ -1,0 +1,162 @@
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~ (master)
+$ git config --global user.name "kattah"
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~ (master)
+$ git config --global user.email "requrityn@gmail.com"
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~ (master)
+$ mkdir 1
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~ (master)
+$ cd 1
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ touch 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Вова Камышев/1/.git/
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git add 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git commit -m "1st commit"
+[master (root-commit) 3af18a8] 1st commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git commit -m "Changed emptiness to '1234'"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git add 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git restore 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git commit -m "Changed emptiness to '1234'"
+[master 26ace80] Changed emptiness to '1234'
+ 1 file changed, 1 insertion(+)
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git add 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git restore 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git commit -m "Made the text bold"
+[master 9f1a453] Made the text bold
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git branch another
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git checkout another
+Switched to branch 'another'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git add 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git restore 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git commit -m "Made the text italic"
+[another 0e30805] Made the text italic
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git checkout master
+Switched to branch 'master'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git checkout another
+Switched to branch 'another'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git checkout master
+Switched to branch 'master'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git checkout another
+Switched to branch 'another'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git reset another~
+Unstaged changes after reset:
+M       1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git reset another~
+Unstaged changes after reset:
+M       1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git add 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git restore 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git add 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git restore 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git commit -m "Added 5678 after 1234"
+[another 6535e02] Added 5678 after 1234
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git checkout master
+Switched to branch 'master'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git merge another
+Auto-merging 1.html
+CONFLICT (content): Merge conflict in 1.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master|MERGING)
+$ git checkout another
+error: you need to resolve your current index first
+1.html: needs merge
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master|MERGING)
+$ git add 1.html
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master|MERGING)
+$ git commit -m "Fixed merge conflict"
+[master 48f504b] Fixed merge conflict
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git checkout another
+Switched to branch 'another'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (another)
+$ git checkout master
+Switched to branch 'master'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git reset --hard HEAD~1
+HEAD is now at 9f1a453 Made the text bold
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$ git reset --hard HEAD~1
+HEAD is now at 26ace80 Changed emptiness to '1234'
+
+Вова Камышев@LAPTOP-GG8H7HVC MINGW64 ~/1 (master)
+$
